@@ -1,5 +1,29 @@
 ### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=IntelliJ IDEA
+GET http://localhost:8080
 
 ###
+GET http://localhost:8080/api/v1/software-engineers
+
+###
+GET http://localhost:8080/api/v1/software-engineers/2
+
+###
+POST http://localhost:8080/api/v1/software-engineers
+Content-Type: application/json
+
+{
+  "name": "Alex",
+  "techStack": "sql, databases, java, spring"
+}
+
+###
+DELETE http://localhost:8080/api/v1/software-engineers/1
+
+###
+PUT http://localhost:8080/api/v1/software-engineers/1
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "techStack": "Java, Spring Boot, PostgreSQL"
+}
